@@ -104,6 +104,14 @@
       color: #0d0f12; font-weight: 900; font-size: 28px;
       box-shadow: var(--shadow);
       border: 3px solid rgba(255,255,255,.06);
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .title h1 {
@@ -154,6 +162,19 @@
     p { margin: 10px 0 0; }
     .muted { color: var(--muted); }
     .serif { font-family: var(--font-serif); }
+
+    .inline-link {
+      color: var(--powder-blue);
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    .inline-link:hover,
+    .inline-link:focus-visible {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+    }
 
     .divider { height: 1px; background: var(--line); margin: 16px 0 18px; }
 
@@ -239,56 +260,58 @@
   <div class="wrap">
     <!-- HERO -->
     <header>
-      <div class="avatar" aria-hidden="true">RD</div>
+      <div class="avatar">
+        <img src="https://s3.us-east-1.amazonaws.com/NaluMedia/rd_square.png" alt="Ryan Dranginis" loading="lazy" />
+      </div>
       <div class="title">
-        <div class="kicker"><span class="spark" aria-hidden="true"></span> Growth Operator • Product Leader • Angel Investor</div>
+        <div class="kicker"><span class="spark" aria-hidden="true"></span> Operator • Team Builder • Product • Growth • Marketing • Angel</div>
         <h1>Ryan Dranginis</h1>
-        <p class="muted">CRO at <strong style="color:var(--powder-blue)">Seatopia</strong> · Backing founders across <strong>Consumer</strong>, <strong>AI</strong> & <strong>Defense</strong> · USMC Veteran</p>
+        <p class="muted">CRO at <strong><a class="inline-link" href="https://seatopia.fish/" target="_blank" rel="noopener">Seatopia</a></strong> · Backing founders across <strong>Consumer</strong>, <strong>AI</strong> & <strong>Defense</strong> · USMC Veteran</p>
       </div>
     </header>
 
     <div class="grid">
       <!-- LEFT: Bio + Investing -->
       <section class="card" aria-labelledby="bio">
-        <h2 id="bio" class="serif">Operator & builder</h2>
+        <h2 id="bio" class="serif">Operator, team builder, product, growth & marketing leader</h2>
         <p>
-          Ryan is a growth and product leader with a track record of scaling early-stage companies.
-          He was an early team member at <strong>The Rubicon Project (IPO)</strong>, <strong>Classy.org (acquired by GoFundMe)</strong>, and other venture-backed startups
+          Ryan is a product, growth and marketing leader with a track record of scaling early-stage companies.
+          He was an early team member at <strong><a class="inline-link" href="https://www.magnite.com/" target="_blank" rel="noopener">The Rubicon Project</a> (IPO)</strong>, <strong><a class="inline-link" href="https://pro.gofundme.com/" target="_blank" rel="noopener">Classy.org</a> (acquired by GoFundMe)</strong>, and other venture-backed startups
           that collectively raised over <strong>$250M</strong>.
         </p>
         <p>
-          He is currently CRO at <strong>Seatopia</strong>, a venture-backed direct-to-consumer company generating
+          He is currently CRO at <strong><a class="inline-link" href="https://seatopia.fish/" target="_blank" rel="noopener">Seatopia</a></strong>, a venture-backed direct-to-consumer company generating
           <strong>$6M in annual revenue</strong>, building the future of regenerative seafood.
         </p>
 
         <div class="divider"></div>
 
-        <h2 class="serif">Angel investing</h2>
+        <h2 class="serif">Angel investor</h2>
         <p>
           Ryan has backed <strong>15+ companies and funds</strong>, including
-          <strong>Instacart</strong> <span class="chip">Consumer</span>,
-          <strong>HavocAI</strong> <span class="chip">AI / Defense Tech</span>,
-          and <strong>CamberCloud</strong> <span class="chip">AI / Data</span>.
+          <strong><a class="inline-link" href="https://www.instacart.com/" target="_blank" rel="noopener">Instacart</a></strong> <span class="chip">Consumer</span>,
+          <strong><a class="inline-link" href="https://www.havocai.com/" target="_blank" rel="noopener">HavocAI</a></strong> <span class="chip">AI / Defense Tech</span>,
+          and <strong><a class="inline-link" href="https://www.cambercloud.com/" target="_blank" rel="noopener">CamberCloud</a></strong> <span class="chip">AI / Data</span>.
           He focuses on proven founders with a clear vision and the ability to build teams that scale—backing companies with strong problem–solution fit,
           a commitment to design and brand, and a tactical plan to reach product–market fit and efficiently grow beyond <strong>$1M ARR</strong>.
         </p>
 
-        <ul class="clean check">
+        <!-- <ul class="clean check">
           <li>Founder–market fit & clear ICP</li>
           <li>Ship velocity • Design & brand as leverage</li>
           <li>Capital efficiency • Line of sight to $1M ARR</li>
-        </ul>
+        </ul> -->
 
         <div class="cta" role="navigation" aria-label="Primary links">
           <a class="btn" href="https://www.linkedin.com/in/ryandranginis" target="_blank" rel="noopener" aria-label="Connect on LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.9-2.2 4-2.2 4.3 0 5.1 2.8 5.1 6.5V24h-4v-6.9c0-1.7 0-3.9-2.4-3.9s-2.7 1.9-2.7 3.8V24h-4V8z"/></svg>
             Connect on LinkedIn
           </a>
-          <a class="btn ghost" href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener" aria-label="Follow on Instagram">
+          <a class="btn ghost" href="https://www.instagram.com/ryandranginis" target="_blank" rel="noopener" aria-label="Follow on Instagram">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm12 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2.2a2.8 2.8 0 110 5.6 2.8 2.8 0 010-5.6z"/></svg>
             Follow on Instagram
           </a>
-          <a class="btn ghost" href="mailto:hello@ryandranginis.com" aria-label="Send Ryan an email">
+          <a class="btn ghost" href="mailto:ryan.dranginis@gmail.com" aria-label="Send Ryan an email">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 4h20v16H2z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 6l10 7 10-7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
             Get in touch
           </a>
@@ -297,16 +320,16 @@
 
       <!-- RIGHT: Quick facts -->
       <aside class="card" aria-label="Quick facts">
-        <h2 class="serif">Quick facts</h2>
+        <h2 class="serif">Snapshot</h2>
         <ul class="clean">
-          <li><strong>Now:</strong> CRO @ Seatopia</li>
-          <li><strong>Prior:</strong> The Rubicon Project (IPO), Classy.org (acq.)</li>
+          <li><strong>Now:</strong> CRO @ <a class="inline-link" href="https://seatopia.fish/" target="_blank" rel="noopener">Seatopia</a></li>
+          <li><strong>Prior:</strong> <a class="inline-link" href="https://www.magnite.com/" target="_blank" rel="noopener">The Rubicon Project </a>(IPO), <a class="inline-link" href="https://pro.gofundme.com/" target="_blank" rel="noopener">Classy.org</a> (acq.)</li>
           <li><strong>Investing:</strong> 15+ deals across Consumer, AI & Defense</li>
           <li><strong>Background:</strong> USNA grad, Division I golfer, Marine combat veteran</li>
           <li><strong>Home base:</strong> Encinitas, CA</li>
         </ul>
 
-        <div class="divider"></div>
+        <!-- <div class="divider"></div>
 
         <h2 class="serif">Focus areas</h2>
         <div class="chips">
@@ -317,22 +340,24 @@
           <span class="chip">Capital Efficiency</span>
           <span class="chip">$1M ARR Path</span>
           <span class="chip">Brand & Design</span>
-        </div>
+        </div> -->
 
         <div class="divider"></div>
 
         <h2 class="serif">Links</h2>
         <ul class="clean">
-          <li><a class="muted" href="https://seatopia.fish" target="_blank" rel="noopener">Seatopia</a></li>
-          <li><a class="muted" href="https://cambercloud.com" target="_blank" rel="noopener">CamberCloud</a></li>
-          <li><a class="muted" href="https://ryandranginis.substack.com" target="_blank" rel="noopener">Writing / Substack</a></li>
+          <!-- <li><a class="muted" href="https://seatopia.fish" target="_blank" rel="noopener">Seatopia</a></li>
+          <li><a class="muted" href="https://cambercloud.com" target="_blank" rel="noopener">CamberCloud</a></li> -->
+           <li><a class="muted" href="https://www.gantis.co/" target="_blank" rel="noopener">Gantis</a></li>
+          
+          <li><a class="muted" href="https://substack.com/@dranginis" target="_blank" rel="noopener">Writing / Substack</a></li>
         </ul>
       </aside>
     </div>
 
     <footer>
       <div>© <span id="y"></span> Ryan Dranginis</div>
-      <div class="mono">Ocean-obsessed surfer, dad of two, occasionally chasing Bigfoot in a van.</div>
+      <!-- <div class="mono">Ocean-obsessed surfer, dad of two, occasionally chasing Bigfoot in a van.</div> -->
     </footer>
   </div>
 
