@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Ryan Dranginis — Growth Operator & Angel Investor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Growth & product leader, CRO at Seatopia ($6M ARR). Angel investor (15+ deals across Consumer, AI & Defense). USMC veteran." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Ryan Dranginis — Growth Operator & Angel Investor" />
+  <meta property="og:description" content="CRO at Seatopia. Backing founders in Consumer, AI & Defense. Former USMC officer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ryandranginis.com" />
+  <meta property="og:image" content="https://ryandranginis.com/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ryan Dranginis — Growth Operator & Angel Investor" />
+  <meta name="twitter:description" content="CRO at Seatopia. Backing founders in Consumer, AI & Defense. Former USMC officer." />
+  <meta name="twitter:image" content="https://ryandranginis.com/og.jpg" />
+
+  <!-- Merriweather & Merriweather Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Merriweather+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🌊</text></svg>">
+
+  <style>
+    /* ===== Color System (from your palette) ===== */
+    :root {
+      /* Brand palette */
+      --yale-blue: #003270; /* base brand */
+      --marian-blue: #004190; /* deep brand */
+      --air-blue: #6f9cb2; /* subtle surface */
+      --powder-blue: #a5c1d5; /* soft accents */
+      --dark-green: #1a3329; /* rich depth */
+      --dark-slate: #1c3934; /* dark bg alt */
+      --hunter-green: #44613c;
+      --olive: #756f09;
+      --gamboge: #f49605; /* primary accent */
+      --orange-web: #fbab02; /* accent gradient end */
+
+      /* Theme tokens */
+      --bg: var(--dark-slate);
+      --bg-2: #0e1f28;
+      --card: #0f2230;
+      --ink: #eaf2f8;
+      --muted: #b7c7d4;
+      --line: rgba(165, 193, 213, 0.18);
+      --brand: var(--yale-blue);
+      --brand-2: var(--marian-blue);
+      --accent: var(--gamboge);
+      --accent-2: var(--orange-web);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+
+      --radius: 20px;
+      --font-sans: "Merriweather Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --font-serif: "Merriweather", Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f5f8fb;
+        --bg-2: #eef5fb;
+        --card: #ffffff;
+        --ink: #0d1922;
+        --muted: #496273;
+        --line: rgba(0, 50, 112, 0.12);
+        --shadow: 0 20px 50px rgba(0, 24, 47, 0.08);
+      }
+    }
+
+    /* ===== Base ===== */
+    * { box-sizing: border-box }
+    html, body { height: 100% }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 700px at 80% -10%, rgba(0,65,144,.22), transparent 60%),
+        radial-gradient(900px 600px at -10% 10%, rgba(165,193,213,.16), transparent 60%),
+        linear-gradient(180deg, var(--bg-2), var(--bg));
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      letter-spacing: .2px;
+    }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 48px 22px 88px }
+
+    /* ===== Header / Hero ===== */
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 22px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 84px; height: 84px; border-radius: 22px;
+      background:
+        conic-gradient(from 210deg, var(--accent), var(--accent-2) 40%, var(--powder-blue));
+      display: grid; place-items: center;
+      color: #0d0f12; font-weight: 900; font-size: 28px;
+      box-shadow: var(--shadow);
+      border: 3px solid rgba(255,255,255,.06);
+    }
+
+    .title h1 {
+      margin: 0 0 8px 0;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: clamp(30px, 5vw, 44px);
+      letter-spacing: .3px;
+      line-height: 1.15;
+    }
+
+    .kicker {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 13px; color: var(--muted);
+      padding: 6px 12px; border-radius: 999px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.0));
+      backdrop-filter: blur(6px);
+    }
+
+    .spark {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff, var(--accent) 60%, transparent 70%);
+      box-shadow: 0 0 0 3px rgba(244,150,5,.18);
+    }
+
+    /* ===== Layout ===== */
+    .grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+    @media (min-width: 960px) {
+      .grid { grid-template-columns: 1.25fr .75fr; }
+    }
+
+    section.card, aside.card {
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    h2 {
+      margin: 0 0 6px;
+      font-family: var(--font-serif);
+      font-size: clamp(18px, 2.6vw, 22px);
+      letter-spacing: .2px;
+    }
+
+    p { margin: 10px 0 0; }
+    .muted { color: var(--muted); }
+    .serif { font-family: var(--font-serif); }
+
+    .divider { height: 1px; background: var(--line); margin: 16px 0 18px; }
+
+    /* ===== Chips / Pills ===== */
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip {
+      font-size: 12px; color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.0));
+    }
+
+    /* ===== Checklist ===== */
+    ul.clean { list-style: none; padding: 0; margin: 0 }
+    ul.clean li { margin: 8px 0; }
+    ul.check li { position: relative; padding-left: 22px; }
+    ul.check li::before {
+      content: "✔";
+      position: absolute; left: 0; top: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ===== Buttons ===== */
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+    .btn {
+      --bg: linear-gradient(135deg, var(--gamboge), var(--orange-web));
+      display: inline-flex; align-items: center; gap: 10px;
+      text-decoration: none; color: #0f130f; font-weight: 800;
+      padding: 12px 14px; border-radius: 14px; background: var(--bg);
+      box-shadow: 0 10px 30px rgba(251,171,2,.25), inset 0 -2px 0 rgba(0,0,0,.12);
+      transform: translateY(0);
+      transition: transform .15s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 16px 40px rgba(251,171,2,.32) }
+    .btn.ghost {
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid var(--line);
+      box-shadow: none;
+      font-weight: 700;
+    }
+
+    .btn svg { width: 18px; height: 18px }
+
+    /* ===== Right rail ===== */
+    aside.card ul li strong { color: var(--powder-blue) }
+
+    /* ===== Footer ===== */
+    footer {
+      margin-top: 26px; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+      color: var(--muted); font-size: 14px;
+    }
+    .mono { font-family: "Merriweather Sans", monospace; font-size: 13px }
+
+    /* ===== Subtle motion ===== */
+    @keyframes floatUp {
+      from { transform: translateY(6px); opacity: 0 }
+      to { transform: translateY(0); opacity: 1 }
+    }
+    header, .grid, footer { animation: floatUp .6s ease both }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Ryan Dranginis",
+    "url":"https://ryandranginis.com",
+    "jobTitle":"Chief Revenue Officer, Seatopia",
+    "affiliation": {"@type":"Organization","name":"Seatopia"},
+    "alumniOf":{"@type":"CollegeOrUniversity","name":"United States Naval Academy"},
+    "sameAs":[
+      "https://www.linkedin.com/in/ryandranginis",
+      "https://www.instagram.com/YOUR_HANDLE"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- HERO -->
+    <header>
+      <div class="avatar" aria-hidden="true">RD</div>
+      <div class="title">
+        <div class="kicker"><span class="spark" aria-hidden="true"></span> Growth Operator • Product Leader • Angel Investor</div>
+        <h1>Ryan Dranginis</h1>
+        <p class="muted">CRO at <strong style="color:var(--powder-blue)">Seatopia</strong> · Backing founders across <strong>Consumer</strong>, <strong>AI</strong> & <strong>Defense</strong> · USMC Veteran</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT: Bio + Investing -->
+      <section class="card" aria-labelledby="bio">
+        <h2 id="bio" class="serif">Operator & builder</h2>
+        <p>
+          Ryan is a growth and product leader with a track record of scaling early-stage companies.
+          He was an early team member at <strong>The Rubicon Project (IPO)</strong>, <strong>Classy.org (acquired by GoFundMe)</strong>, and other venture-backed startups
+          that collectively raised over <strong>$250M</strong>.
+        </p>
+        <p>
+          He is currently CRO at <strong>Seatopia</strong>, a venture-backed direct-to-consumer company generating
+          <strong>$6M in annual revenue</strong>, building the future of regenerative seafood.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2 class="serif">Angel investing</h2>
+        <p>
+          Ryan has backed <strong>15+ companies and funds</strong>, including
+          <strong>Instacart</strong> <span class="chip">Consumer</span>,
+          <strong>HavocAI</strong> <span class="chip">AI / Defense Tech</span>,
+          and <strong>CamberCloud</strong> <span class="chip">AI / Data</span>.
+          He focuses on proven founders with a clear vision and the ability to build teams that scale—backing companies with strong problem–solution fit,
+          a commitment to design and brand, and a tactical plan to reach product–market fit and efficiently grow beyond <strong>$1M ARR</strong>.
+        </p>
+
+        <ul class="clean check">
+          <li>Founder–market fit & clear ICP</li>
+          <li>Ship velocity • Design & brand as leverage</li>
+          <li>Capital efficiency • Line of sight to $1M ARR</li>
+        </ul>
+
+        <div class="cta" role="navigation" aria-label="Primary links">
+          <a class="btn" href="https://www.linkedin.com/in/ryandranginis" target="_blank" rel="noopener" aria-label="Connect on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.9-2.2 4-2.2 4.3 0 5.1 2.8 5.1 6.5V24h-4v-6.9c0-1.7 0-3.9-2.4-3.9s-2.7 1.9-2.7 3.8V24h-4V8z"/></svg>
+            Connect on LinkedIn
+          </a>
+          <a class="btn ghost" href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener" aria-label="Follow on Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm12 1.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2.2a2.8 2.8 0 110 5.6 2.8 2.8 0 010-5.6z"/></svg>
+            Follow on Instagram
+          </a>
+          <a class="btn ghost" href="mailto:hello@ryandranginis.com" aria-label="Send Ryan an email">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 4h20v16H2z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 6l10 7 10-7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            Get in touch
+          </a>
+        </div>
+      </section>
+
+      <!-- RIGHT: Quick facts -->
+      <aside class="card" aria-label="Quick facts">
+        <h2 class="serif">Quick facts</h2>
+        <ul class="clean">
+          <li><strong>Now:</strong> CRO @ Seatopia</li>
+          <li><strong>Prior:</strong> The Rubicon Project (IPO), Classy.org (acq.)</li>
+          <li><strong>Investing:</strong> 15+ deals across Consumer, AI & Defense</li>
+          <li><strong>Background:</strong> USNA grad, Division I golfer, Marine combat veteran</li>
+          <li><strong>Home base:</strong> Encinitas, CA</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2 class="serif">Focus areas</h2>
+        <div class="chips">
+          <span class="chip">Growth & GTM</span>
+          <span class="chip">Product & CX</span>
+          <span class="chip">Consumer</span>
+          <span class="chip">AI / Defense</span>
+          <span class="chip">Capital Efficiency</span>
+          <span class="chip">$1M ARR Path</span>
+          <span class="chip">Brand & Design</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 class="serif">Links</h2>
+        <ul class="clean">
+          <li><a class="muted" href="https://seatopia.fish" target="_blank" rel="noopener">Seatopia</a></li>
+          <li><a class="muted" href="https://cambercloud.com" target="_blank" rel="noopener">CamberCloud</a></li>
+          <li><a class="muted" href="https://ryandranginis.substack.com" target="_blank" rel="noopener">Writing / Substack</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <span id="y"></span> Ryan Dranginis</div>
+      <div class="mono">Ocean-obsessed surfer, dad of two, occasionally chasing Bigfoot in a van.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
